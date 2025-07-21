@@ -49,7 +49,7 @@ public class EmployeeController {
         return ResponseEntity.ok("Employee deleted successfully!");
     }
 
-    // --- Exception Handlers ---
+
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<String> handleResourceNotFound(ResourceNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
